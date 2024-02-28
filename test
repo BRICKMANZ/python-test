@@ -8,3 +8,30 @@ def factorial(n):
 # Test the factorial function
 number = 5
 print("The factorial of", number, "is", factorial(number))
+def fibonacci(n):
+    """Generate the Fibonacci sequence up to the nth term."""
+    fib_sequence = []
+    a, b = 0, 1
+    for _ in range(n):
+        fib_sequence.append(a)
+        a, b = b, a + b
+    return fib_sequence
+
+# Test the fibonacci function
+num_terms = 10
+fibonacci_sequence = fibonacci(num_terms)
+print("Fibonacci sequence up to", num_terms, "terms:")
+print(fibonacci_sequence)
+def calculate_rectangle_area(length, width):
+    """Calculate the area of a rectangle."""
+    return length * width
+
+# Input the dimensions of the rectangle
+length = float(input("Enter the length of the rectangle: "))
+width = float(input("Enter the width of the rectangle: "))
+
+# Calculate the area
+area = calculate_rectangle_area(length, width)
+
+# Output the result
+print("The area of the rectangle is:", area)
